@@ -2,8 +2,9 @@ var express = require('express');
 var mongoose = require('mongoose');
 var app = express();
 
+
 // DB setting
-mongoose.connect(process.env.MONGO_DB);
+mongoose.connect("mongodb+srv://Seonghyeok:k9chan1212@cluster0.9ty5o.mongodb.net/?retryWrites=true&w=majority");
 var db = mongoose.connection;
 db.once('open', function(){
   console.log('DB connected');
